@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Counter from "./components/Counter/Counter";
+import React from "react";
 
 function App() {
   return "hi";
