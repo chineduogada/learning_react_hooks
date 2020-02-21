@@ -4,7 +4,7 @@ export default function Layout() {
   return (
     <div className="layout">
       <aside className="layout__aside">
-        <div className="layout__brand">NRC - HR</div>
+        <div className="layout__brand">MY E-SHOP</div>
       </aside>
 
       <main className="layout__main-area">

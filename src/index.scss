@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   /* color */
   --primary-color: #44449c;
@@ -18,4 +19,13 @@ html {
   --base-double-size: 2rem;
   --base-half-size: 0.5rem;
   /* end of font-sizes */
+
+  // font families
+  --font-fam-1: Arial, Helvetica, sans-serif;
+  --font-fam-2: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  // end of font families
+}
+
+body {
+  font-family: var(--font-fam-1);
 }
