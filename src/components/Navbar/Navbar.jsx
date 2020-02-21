@@ -1,7 +1,8 @@
 import React from "react";
 import "./Navbar.scss";
-import { AiFillPlusCircle } from "react-icons/ai";
+import { AiFillPlusCircle, AiOutlineShoppingCart } from "react-icons/ai";
 import Brand from "./../Brand/Brand";
+import Avatar from "../Avatar/Avatar";
 
 export default function Navbar() {
   return (
@@ -12,10 +13,10 @@ export default function Navbar() {
         </li>
 
         <li className="navbar__item">
-          <span className="avatar"></span>
-          <span className="navbar__bars">
-            <AiFillPlusCircle />
-          </span>
+          <Avatar />
+
+          <AiFillPlusCircle className="navbar__icon" />
+          <AiOutlineShoppingCart className="navbar__icon" />
         </li>
       </ul>
     </nav>

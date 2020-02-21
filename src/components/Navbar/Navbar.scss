@@ -1,10 +1,22 @@
 .navbar {
   border: 2px solid;
+  padding: 0.1875rem 0.75rem;
 
   &__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: var(--base-double-size);
+  }
+
+  &__item {
+    &:last-child {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    font-size: var(--base-double-size);
   }
 }
