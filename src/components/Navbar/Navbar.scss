@@ -1,0 +1,10 @@
+.navbar {
+  border: 2px solid;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: var(--base-double-size);
+  }
+}
