@@ -1,4 +1,6 @@
 import React from "react";
+import "./Layout.scss";
+import { AiFillPlusCircle } from "react-icons/ai";
 
 export default function Layout() {
   return (
@@ -10,9 +12,14 @@ export default function Layout() {
       <main className="layout__main-area">
         <nav className="layout__main-area__nav-bar">
           <ul className="layout__main-area__nav-bar__list">
-            <li className="layout__main-area__nav-bar__item"></li>
-            <li className="layout__main-area__nav-bar__item"></li>
-            <li className="layout__main-area__nav-bar__item"></li>
+            <li className="layout__main-area__nav-bar__item">MY E-SHOP</li>
+
+            <li className="layout__main-area__nav-bar__item">
+              <span className="avatar"></span>
+              <span className="layout__main-area__nav-bar__bars">
+                <AiFillPlusCircle />
+              </span>
+            </li>
           </ul>
         </nav>
 
