@@ -1,8 +1,8 @@
 import React from "react";
-import Post from "./components/Post/Post";
+import Layout from "./components/Layout/Layout";
 
 function App() {
-  return <Post />;
+  return <Layout />;
 }
 
 export default App;
