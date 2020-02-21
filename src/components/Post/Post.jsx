@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Post.scss";
 import Button from "../Button/Button";
 import { AiFillPlusCircle } from "react-icons/ai";
+import EditableText from "../EditableText/EditableText";
 
 const MAX_POST_LENGTH = 20;
 
@@ -35,13 +36,16 @@ export default function Post() {
           {message.length} / {MAX_POST_LENGTH}
         </h6>
       </div>
-      <Button
-        label={
-          <span>
-            <AiFillPlusCircle /> post
-          </span>
-        }
-      />
+      <div>
+        <Button
+          label={
+            <span>
+              <AiFillPlusCircle /> post
+            </span>
+          }
+        />
+        <EditableText />
+      </div>
     </form>
   );
 }
