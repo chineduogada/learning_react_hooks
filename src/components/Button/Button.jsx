@@ -11,5 +11,5 @@ export default function Button({ label, ...rest }) {
 }
 
 Button.propTypes = {
-  label: PropTypes.string.isRequired
+  label: PropTypes.any.isRequired
 };
