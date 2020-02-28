@@ -2,9 +2,10 @@
   display: flex;
   width: fit-content;
   max-width: 950px;
-
-  border: 2px solid;
   padding: var(--base-half-size);
+
+  box-shadow: 0 0 6px var(--text-soft-color);
+  border: 3px solid var(--text-inverse-color);
 
   &__img-wrapper {
     min-width: 150px;
@@ -41,7 +42,6 @@
 
   &__content {
     margin-bottom: var(--base-half-size);
-    border: 1px solid;
   }
 
   &__title {
@@ -54,10 +54,6 @@
   }
 
   &__buttons {
-    border: 1px solid;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   &__like-status {
@@ -65,5 +61,15 @@
     font-weight: bold;
     text-transform: capitalize;
     font-style: italic;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .product {
+    &__buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 }
