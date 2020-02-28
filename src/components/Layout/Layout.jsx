@@ -12,7 +12,7 @@ export default function Layout() {
       <main className="layout__main-area">
         <Navbar />
 
-        <section className="layout__main-area__section">
+        <section className="layout__section">
           <Products />
         </section>
       </main>
