@@ -7,10 +7,12 @@
 html {
   /* color */
   --primary-color: #44449c;
+  --primary-light-color: #d6d6ff;
+  --primary-dark-color: #1d1d41;
   --assent-color: #ff5d5d;
   --text-color: #333;
   --text-inverse-color: #fff;
-  --text-soft-color: #999;
+  --text-soft-color: rgba(51, 51, 51, 0.3);
   --line-color: #eee;
   /* end of colors */
 

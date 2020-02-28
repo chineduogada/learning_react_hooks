@@ -1,10 +1,5 @@
 .layout {
-  &__aside {
-    display: none;
-  }
-
   &__main-area {
-    border: 2px solid;
     min-height: 100vh;
 
     display: flex;
