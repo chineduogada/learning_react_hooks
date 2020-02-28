@@ -1,11 +1,33 @@
 .button {
-  background: var(--primary-color);
+  background: var(--text-soft-color);
   color: var(--text-inverse-color);
   text-transform: capitalize;
   font-size: var(--base-size);
+  font-weight: bold;
+  cursor: pointer;
 
-  padding: 0.75rem 1.125rem;
+  padding: 7px 12px;
 
-  border: 0;
-  border-radius: 3rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin: 0 3px;
+
+  transform: scale(1);
+  transition: var(--transition);
+
+  &:hover,
+  &:focus {
+    transform: scale(0.9);
+  }
+
+  &--primary {
+    background: var(--primary-color);
+  }
+  &--warning {
+    background: var(--warning-color);
+  }
+  &--danger {
+    background: var(--danger-color);
+  }
 }

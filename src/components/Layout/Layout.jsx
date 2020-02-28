@@ -2,6 +2,7 @@ import React from "react";
 import "./Layout.scss";
 import Navbar from "../Navbar/Navbar";
 import Aside from "../Aside/Aside";
+import Products from "../Products/Products";
 
 export default function Layout() {
   return (
@@ -11,7 +12,9 @@ export default function Layout() {
       <main className="layout__main-area">
         <Navbar />
 
-        <section className="layout__main-area__section"></section>
+        <section className="layout__section">
+          <Products />
+        </section>
       </main>
     </div>
   );

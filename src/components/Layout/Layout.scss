@@ -1,19 +1,20 @@
 .layout {
   display: flex;
-  align-items: stretch;
 
   &__main-area {
-    min-height: 100vh;
     flex: 1 1 auto;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
+  }
 
-    &__section {
-      flex: 1 0;
+  &__section {
+    flex: 1 0;
+    overflow-y: auto;
 
-      margin: 0.1875rem;
-      border: 2px solid;
-    }
+    margin: 0.1875rem;
+    padding: var(--base-half-size);
+    border: 2px solid;
   }
 }

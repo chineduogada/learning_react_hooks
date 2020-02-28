@@ -1,0 +1,70 @@
+.product {
+  display: flex;
+  width: fit-content;
+  max-width: 950px;
+
+  border: 2px solid;
+  padding: var(--base-half-size);
+  margin-bottom: var(--base-half-size);
+
+  &__img-wrapper {
+    min-width: 150px;
+    height: 150px;
+    border: 1px solid;
+    border-radius: var(--base-half-size);
+    overflow: hidden;
+    margin-right: var(--base-half-size);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+    margin-bottom: var(--base-half-size);
+    justify-content: flex-end;
+  }
+  &__nav-icon {
+    width: var(--base-double-size);
+    height: var(--base-double-size);
+    border-radius: 50%;
+    background: var(--text-inverse-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+  }
+
+  &__content {
+    margin-bottom: var(--base-half-size);
+    border: 1px solid;
+  }
+
+  &__title {
+    margin-bottom: var(--base-half-size);
+    text-transform: capitalize;
+  }
+
+  &__paragraph {
+    line-height: 1.5;
+  }
+
+  &__buttons {
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__like-status {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-transform: capitalize;
+    font-style: italic;
+  }
+}
