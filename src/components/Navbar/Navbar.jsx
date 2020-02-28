@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./Navbar.scss";
-import { AiFillPlusCircle, AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineShoppingCart, AiOutlineMenu } from "react-icons/ai";
 import Brand from "./../Brand/Brand";
 import Avatar from "../Avatar/Avatar";
 import { appContext } from "./../../appContext";
@@ -22,10 +22,7 @@ export default function Navbar() {
         <li className="navbar__item">
           <Avatar />
 
-          <AiFillPlusCircle
-            className="navbar__icon"
-            onClick={handleAsideToggle}
-          />
+          <AiOutlineMenu className="navbar__icon" onClick={handleAsideToggle} />
           <AiOutlineShoppingCart className="navbar__icon" />
         </li>
       </ul>
