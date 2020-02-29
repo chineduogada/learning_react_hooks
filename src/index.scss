@@ -2,13 +2,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+
+    &-thumb {
+      border-radius: 0.5rem;
+      background: var(--primary-color);
+    }
+  }
 }
 
 html {
   /* color */
   --primary-color: #5d5db3;
-  --primary-light-color: #c2c2f1;
-  --primary-dark-color: #1f1f30;
+  --primary-light-color: #e3e3ff;
+  --primary-dark-color: #25255a;
   --warning-color: #ffb649;
   --danger-color: #ff5d5d;
   --text-color: #333;
