@@ -32,30 +32,17 @@ export default function Product() {
           <span className="product__like-status">0 likes</span>
 
           <div>
-            <Button
-              primary
-              label={
-                <span>
-                  <AiFillLike /> Like
-                </span>
-              }
-            />
-            <Button
-              warning
-              label={
-                <span>
-                  <AiFillStar /> favorite
-                </span>
-              }
-            />
-            <Button
-              danger
-              label={
-                <span>
-                  <AiOutlineShoppingCart /> add to cart
-                </span>
-              }
-            />
+            <Button primary>
+              <AiFillLike /> Like
+            </Button>
+
+            <Button warning>
+              <AiFillStar /> favorite
+            </Button>
+
+            <Button danger>
+              <AiOutlineShoppingCart /> add to cart
+            </Button>
           </div>
         </div>
       </div>

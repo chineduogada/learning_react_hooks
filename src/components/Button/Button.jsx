@@ -2,7 +2,13 @@ import React from "react";
 import "./Button.scss";
 import { PropTypes } from "prop-types";
 
-export default function Button({ label, primary, danger, warning, ...rest }) {
+export default function Button({
+  children,
+  primary,
+  danger,
+  warning,
+  ...rest
+}) {
   const getClassName = () => {
     let className = "button";
 
@@ -15,7 +21,7 @@ export default function Button({ label, primary, danger, warning, ...rest }) {
 
   return (
     <button className={getClassName()} {...rest}>
-      {label}
+      {children}
     </button>
   );
 }
