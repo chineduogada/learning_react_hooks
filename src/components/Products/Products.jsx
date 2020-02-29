@@ -6,9 +6,6 @@ export default function Products() {
     <div className="products">
       <Product />
       <Product />
-      <Product />
-      <Product />
-      <Product />
     </div>
   );
 }

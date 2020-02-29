@@ -3,6 +3,7 @@ import "./Layout.scss";
 import Navbar from "../Navbar/Navbar";
 import Aside from "../Aside/Aside";
 import Products from "../Products/Products";
+import StateUseHook from "../StateUseHook";
 
 export default function Layout() {
   return (
@@ -13,6 +14,7 @@ export default function Layout() {
         <Navbar />
 
         <section className="layout__section">
+          <StateUseHook />
           <Products />
         </section>
       </main>
