@@ -3,7 +3,6 @@ import "./Layout.scss";
 import Navbar from "../Navbar/Navbar";
 import Aside from "../Aside/Aside";
 import Products from "../Products/Products";
-import Button from "../Button/Button";
 
 export default function Layout() {
   return (
