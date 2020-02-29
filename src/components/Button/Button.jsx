@@ -27,5 +27,5 @@ export default function Button({
 }
 
 Button.propTypes = {
-  label: PropTypes.any.isRequired
+  children: PropTypes.any.isRequired
 };
