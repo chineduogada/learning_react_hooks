@@ -1,45 +1,35 @@
 import React, { Component } from "react";
-import Button from "./Button/Button";
 
 export default class ClassCounter extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      count: 0,
-      name: ""
+      x: 0,
+      y: 0
     };
   }
 
+  logMousePosition = e => {
+    console.log("logMousePosition called");
+    this.setState({ x: e.clientX, y: e.clientY });
+  };
+
   componentDidMount() {
-    document.title = `React App ${this.state.count}`;
+    console.log("cdm called");
+    window.addEventListener("mousemove", this.logMousePosition);
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.count !== this.state.count) {
-      console.log("Updating document title");
-      document.title = `React App ${this.state.count}`;
-    }
+  componentWillUnmount() {
+    window.removeEventListener("mousemove", this.logMousePosition);
   }
 
   render() {
     return (
-      <>
-        <input
-          type="text"
-          value={this.state.name}
-          onChange={e => {
-            this.setState({ name: e.currentTarget.value });
-          }}
-        />
-        <Button
-          onClick={() =>
-            this.setState(prevState => ({ count: prevState.count + 1 }))
-          }
-        >
-          clicked {this.state.count} times
-        </Button>
-      </>
+      <div>
+        <h2>X - {this.state.x}</h2>
+        <h2>Y - {this.state.y}</h2>
+      </div>
     );
   }
 }
