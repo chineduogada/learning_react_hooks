@@ -3,8 +3,7 @@ import "./Layout.scss";
 import Navbar from "../Navbar/Navbar";
 import Aside from "../Aside/Aside";
 import Products from "./../Products/Products";
-import HookCounterInterval from "../CounterInterval/HookCounterInterval";
-// import ClassCounterInterval from "../CounterInterval/ClassCounterInterval";
+import Resource from "../Resource/Resource";
 
 export default function Layout() {
   return (
@@ -16,7 +15,7 @@ export default function Layout() {
 
         <section className="layout__section">
           {/* <ClassCounterInterval /> */}
-          <HookCounterInterval />
+          <Resource />
           <Products />
         </section>
       </main>
