@@ -1,0 +1,19 @@
+.layout {
+  display: flex;
+
+  &__main-area {
+    flex: 1 1 auto;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__section {
+    flex: 1 0;
+    overflow-y: auto;
+
+    margin: 0.1875rem;
+    padding: var(--base-half-size);
+  }
+}

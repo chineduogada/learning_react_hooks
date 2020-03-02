@@ -1,0 +1,24 @@
+.avatar {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__img_wrapper {
+    position: relative;
+    width: var(--base-double-size);
+    height: var(--base-double-size);
+    border-radius: 50%;
+    border: 2px solid;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // &__icon {
+  //   margin: 3rem;
+  // }
+}

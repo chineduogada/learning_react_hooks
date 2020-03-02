@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import Layout from "./components/Layout/Layout";
+import { appContext } from "./appContext";
 
 function App() {
+  const state = useState({
+    isAsideOpen: false,
+    currentMainContent: "recent products"
+  });
+
   return (
-    <div style={{ display: "grid", placeItems: "center", minHeight: "100vh" }}>
-      develop
-    </div>
+    <appContext.Provider value={state}>
+      <Layout />
+    </appContext.Provider>
   );
 }
 

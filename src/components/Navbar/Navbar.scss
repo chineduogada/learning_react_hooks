@@ -1,0 +1,25 @@
+.navbar {
+  padding: 0.1875rem 0.75rem;
+  color: var(--text-inverse-color);
+  background: var(--primary-color);
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: var(--base-double-size);
+    list-style: none;
+  }
+
+  &__item {
+    &:last-child {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    font-size: var(--base-double-size);
+    cursor: pointer;
+  }
+}
