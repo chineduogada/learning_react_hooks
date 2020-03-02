@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { PropTypes } from "prop-types";
 import axios from "axios";
 
-const Resource = ({ render, url }) => {
+const useResource = url => {
   const [payload, setPayload] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -17,19 +16,16 @@ const Resource = ({ render, url }) => {
         setPayload(payload);
       })
       .catch(error => {
+        setLoading(false);
         console.log(error);
         setError(error.message);
       });
   }, [url]);
 
-  const data = { payload, error, loading };
+  let data = { payload, error, loading };
+  const setData = newData => (data = newData);
 
-  return render(data);
+  return [data, setData];
 };
 
-Resource.propTypes = {
-  render: PropTypes.func.isRequired,
-  url: PropTypes.string
-};
-
-export default Resource;
+export default useResource;

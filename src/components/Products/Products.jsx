@@ -1,14 +1,20 @@
 import React from "react";
 import Product from "../Product/Product";
-import Resource from "../Resource/Resource";
+import useResource from "./../../Hooks/useResource";
+import Spinner from "./../Spinner/Spinner";
 
 export default function Products() {
+  const [data] = useResource("http://jsonplaceholder.typicode.com/posts");
+
   return (
     <div className="products">
-      <Resource
-        url="http://jsonplaceholder.typicode.com/posts"
-        render={data => data.payload.map(product => <Product />)}
-      />
+      {data.loading ? (
+        <Spinner />
+      ) : data.error ? (
+        <h3>{data.error}</h3>
+      ) : (
+        data.payload.map(product => <Product key={product.id} data={product} />)
+      )}
     </div>
   );
 }

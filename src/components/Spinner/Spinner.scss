@@ -1,0 +1,21 @@
+.spinner {
+  animation: spin 6s alternate infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(360deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(1440deg) scale(1.2);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.1);
+  }
+}
