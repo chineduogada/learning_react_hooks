@@ -7,6 +7,7 @@ import Product from "../Product/Product";
 import axios from "axios";
 import Button from "../Button/Button";
 import Spinner from "./../Spinner/Spinner";
+import Input from "../Input/Input";
 
 export default function Layout() {
   const [post, setPost] = useState({});
@@ -43,11 +44,14 @@ export default function Layout() {
         <section className="layout__section">
           {/* <ClassCounterInterval /> */}
           <div style={{ border: "2px solid", padding: ".375rem" }}>
-            <input
+            <Input
               type="text"
               value={id}
               onChange={e => setId(e.currentTarget.value)}
+              label="enter post id"
+              required
             />
+            <Input label="testing" value={id} />
             <Button onClick={fetchData}>
               {loading ? <Spinner /> : "fetch post"}
             </Button>
