@@ -1,16 +1,12 @@
-import React, { useContext } from "react";
-import ComponentC from "../ComponentC/ComponentC";
-import { userContext, statusContext } from "../../App";
+import React from "react";
+import ComponentD from "../ComponentD/ComponentD";
 
 function ComponentB() {
-  const user = useContext(userContext);
-  const status = useContext(statusContext);
-
   return (
-    <div>
+    <div className="comp">
       <h1>Component B</h1>
-      {user} - {status ? "online" : "offline"}
-      <ComponentC />
+
+      <ComponentD />
     </div>
   );
 }

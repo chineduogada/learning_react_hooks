@@ -1,11 +1,11 @@
 import React from "react";
 
-function ComponentA() {
+function ComponentD() {
   return (
     <div className="comp">
-      <h1>Component A</h1>
+      <h1>Component D</h1>
     </div>
   );
 }
 
-export default ComponentA;
+export default ComponentD;

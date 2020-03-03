@@ -1,22 +1,12 @@
 import React from "react";
-import { userContext, statusContext } from "../../App";
+import ComponentE from "../ComponentE/ComponentE";
 
 function ComponentC() {
   return (
-    <div>
+    <div className="comp">
       <h1>Component C</h1>
 
-      <userContext.Consumer>
-        {user => (
-          <statusContext.Consumer>
-            {status => (
-              <div>
-                hi {user}, you're {status ? "online" : "offline"}
-              </div>
-            )}
-          </statusContext.Consumer>
-        )}
-      </userContext.Consumer>
+      <ComponentE />
     </div>
   );
 }
