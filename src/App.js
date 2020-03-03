@@ -1,6 +1,7 @@
 import React from "react";
-import CounterOne from "./components/CounterOne/CounterOne";
-import CounterTwo from "./components/CounterTwo/CounterTwo";
+// import CounterOne from "./components/CounterOne/CounterOne";
+// import CounterTwo from "./components/CounterTwo/CounterTwo";
+import CounterThree from "./components/CounterThree/CounterThree";
 
 export const userContext = React.createContext();
 export const statusContext = React.createContext();
@@ -14,8 +15,9 @@ function App() {
   };
   return (
     <div style={styles}>
-      <CounterOne />
-      <CounterTwo />
+      {/* <CounterOne />
+      <CounterTwo /> */}
+      <CounterThree />
     </div>
   );
 }
