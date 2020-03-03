@@ -1,26 +1,22 @@
-import React, { useState } from "react";
-import Layout from "./components/Layout/Layout";
-import { appContext } from "./appContext";
+import React from "react";
 import CounterOne from "./components/CounterOne/CounterOne";
+import CounterTwo from "./components/CounterTwo/CounterTwo";
 
 export const userContext = React.createContext();
 export const statusContext = React.createContext();
 
 function App() {
-  // const state = useState({
-  //   isAsideOpen: false,
-  //   currentMainContent: "recent products"
-  // });
-
+  const styles = {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    textAlign: "center"
+  };
   return (
-    // <appContext.Provider value={state}>
-    //   <userContext.Provider value="richCode">
-    //     <statusContext.Provider value={false}>
-    //       <Layout />
-    //     </statusContext.Provider>
-    //   </userContext.Provider>
-    // </appContext.Provider>
-    <CounterOne />
+    <div style={styles}>
+      <CounterOne />
+      <CounterTwo />
+    </div>
   );
 }
 
