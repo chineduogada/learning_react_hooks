@@ -1,5 +1,6 @@
 import React from "react";
 import DataFetching from "./components/DataFetching/DataFetching";
+import DataFetching2 from "./components/DataFetching/DataFetching2";
 function App() {
   const styles = {
     display: "flex",
@@ -9,7 +10,7 @@ function App() {
   };
   return (
     <div style={styles}>
-      <DataFetching />
+      <DataFetching2 />
     </div>
   );
 }
