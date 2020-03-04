@@ -3,7 +3,7 @@ import axios from "axios";
 
 const useResource = url => {
   const [payload, setPayload] = useState([]);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -12,12 +12,12 @@ const useResource = url => {
       .get(url)
       .then(({ data: payload }) => {
         setLoading(false);
-        console.log(payload);
         setPayload(payload);
+        setError("");
       })
       .catch(error => {
         setLoading(false);
-        console.log(error);
+        setPayload([]);
         setError(error.message);
       });
   }, [url]);
