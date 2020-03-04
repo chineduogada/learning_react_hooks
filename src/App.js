@@ -1,16 +1,16 @@
 import React from "react";
-import DataFetching from "./components/DataFetching/DataFetching";
-import DataFetching2 from "./components/DataFetching/DataFetching2";
+import ParentComponent from "./components/ParentComponent/ParentComponent";
 function App() {
   const styles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    textAlign: "center"
+    textAlign: "center",
+    padding: "3rem"
   };
   return (
     <div style={styles}>
-      <DataFetching2 />
+      <ParentComponent />
     </div>
   );
 }
