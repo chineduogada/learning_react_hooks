@@ -19,7 +19,7 @@
   &__label {
     color: var(--text-soft-color);
     position: absolute;
-    // pointer-events: none;
+    cursor: text;
     z-index: 1;
     top: 50%;
     left: 0;
@@ -34,6 +34,7 @@
       transform: translateY(-200%) translateX(0);
       font-weight: normal;
       padding-left: 0;
+      cursor: pointer;
     }
   }
   &__input {
@@ -56,6 +57,10 @@
     &:focus {
       border-width: 2px;
       padding-left: 0.75rem;
+
+      & + .formControl__label {
+        color: var(--primary-color);
+      }
     }
   }
 }

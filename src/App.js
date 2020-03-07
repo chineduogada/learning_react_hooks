@@ -1,26 +1,17 @@
 import React, { useState } from "react";
-import ClassTimer from "./components/ClassTimer";
-import Button from "./components/Button/Button.jsx";
-import HookTimer from "./components/HookTimer";
-function App() {
-  const [isDisplayed, setIsDisplayed] = useState(true);
+import Layout from "./components/Layout/Layout";
+import { appContext } from "./appContext";
 
-  const styles = {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-    padding: "3rem"
-  };
+function App() {
+  const state = useState({
+    isAsideOpen: false,
+    currentMainContent: "recent products"
+  });
+
   return (
-    <div style={styles}>
-      {/* <FocusInput /> */}
-      <Button primary onClick={() => setIsDisplayed(prevState => !prevState)}>
-        toggle counter
-      </Button>
-      {isDisplayed && <HookTimer />}
-    </div>
+    <appContext.Provider value={state}>
+      <Layout />
+    </appContext.Provider>
   );
 }
 

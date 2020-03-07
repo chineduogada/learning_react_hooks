@@ -2,7 +2,7 @@ import React from "react";
 import "./Layout.scss";
 import Navbar from "../Navbar/Navbar";
 import Aside from "../Aside/Aside";
-import ComponentA from "../ComponentA/ComponentA";
+import UserForm from "../UserForm";
 
 export default function Layout() {
   return (
@@ -13,7 +13,7 @@ export default function Layout() {
         <Navbar />
 
         <section className="layout__section">
-          <ComponentA />
+          <UserForm />
         </section>
       </main>
     </div>
