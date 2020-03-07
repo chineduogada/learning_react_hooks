@@ -1,52 +1,33 @@
-import React, { useReducer } from "react";
+import React from "react";
 import Input from "./Input/Input";
 import Button from "./Button/Button";
+import useForm from "../Hooks/useForm";
 
 const initialState = {
   firstName: "",
   lastName: ""
 };
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "change":
-      console.log(action.input.name);
-
-      return {
-        ...state,
-        [action.input.name]: action.input.value
-      };
-
-    case "reset":
-      return initialState;
-    default:
-      return state;
-  }
-};
-
 function UserForm() {
-  const [state, dispatch] = useReducer(reducer, initialState);
-
-  const handleSubmit = e => {
-    e.preventDefault();
-
+  const doSubmit = e => {
     alert(`Hello ${state.firstName} ${state.lastName}`);
-    dispatch({ type: "reset" });
   };
 
+  const [state, onChange, onSubmit] = useForm(initialState, doSubmit);
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={onSubmit}>
       <Input
         label="first name"
         name="firstName"
         value={state.firstName}
-        onChange={e => dispatch({ type: "change", input: e.currentTarget })}
+        onChange={onChange}
       />
       <Input
         label="last name"
         name="lastName"
         value={state.lastName}
-        onChange={e => dispatch({ type: "change", input: e.currentTarget })}
+        onChange={onChange}
       />
 
       <Button>Submit</Button>
